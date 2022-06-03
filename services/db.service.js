@@ -1,6 +1,6 @@
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://shani:<eini>@monday.kz6ch.mongodb.net/?retryWrites=true&w=majority";
+const uri = "localhost://shani:eini@monday.kz6ch.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 // , serverApi: ServerApiVersion.v1 
 client.connect(err => {
@@ -8,7 +8,6 @@ client.connect(err => {
     // perform actions on the collection object
     client.close();
 });
-
 
 const config = require('../config')
 
