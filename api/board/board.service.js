@@ -56,30 +56,30 @@ async function add(board) {
             ],
             persons: [
                 {
-                    _id: "u101",
+                    id: "u101",
                     fullname: "Carmel Yona",
                     imgUrl: "https://www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
                 },
                 {
-                    _id: "u102",
+                    id: "u102",
                     fullname: "Shani Eini",
                     imgUrl: "https://www.google.com"
                 },
                 {
-                    _id: "u103",
+                    id: "u103",
                     fullname: "Hallel Hofman",
                     imgUrl: "https://www.google.com"
                 }
             ],
             groups: [
                 {
-                    _id: "g101",
+                    id: "g101",
                     title: "Group 1",
                     archivedAt: new Date,
                     style: {},
                     tasks: [
                         {
-                            _id: "c101",
+                            id: "c101",
                             title: "New item",
                             text: "write something",
                             status: "done",
@@ -87,14 +87,14 @@ async function add(board) {
                             importance: "high",
                             persons: [
                                 {
-                                    _id: "u101",
+                                    id: "u101",
                                     fullname: "Carmel Yona",
                                     imgUrl: "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
                                 }
                             ]
                         },
                         {
-                            _id: "c102",
+                            id: "c102",
                             title: "New item",
                             text: "write something",
                             status: "done",
@@ -102,7 +102,7 @@ async function add(board) {
                             importance: "mid",
                             persons: [
                                 {
-                                    _id: "u101",
+                                    id: "u101",
                                     fullname: "Carmel Yona",
                                     imgUrl: "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
                                 }
@@ -111,11 +111,11 @@ async function add(board) {
                     ]
                 },
                 {
-                    _id: "g102",
+                    id: "g102",
                     title: "Group 2",
                     tasks: [
                         {
-                            _id: "c103",
+                            id: "c103",
                             title: "New item",
                             text: "write something",
                             status: "done",
@@ -123,7 +123,7 @@ async function add(board) {
                             importance: "low",
                             persons: [
                                 {
-                                    _id: "u102",
+                                    id: "u102",
                                     fullname: "Shani eini",
                                     imgUrl: "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
                                 }
@@ -131,14 +131,14 @@ async function add(board) {
                             archivedAt: new Date
                         },
                         {
-                            _id: "c104",
+                            id: "c104",
                             title: "New item",
                             text: "write something",
                             date: "24/06/2012",
                             importance: "high",
                             persons: [
                                 {
-                                    _id: "u102",
+                                    id: "u102",
                                     fullname: "Shani eini",
                                     imgUrl: "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
                                 }
@@ -151,7 +151,7 @@ async function add(board) {
                                     txt: "also @yaronb please CR this",
                                     createdAt: 1590999817436.0,
                                     byMember: {
-                                        _id: "u101",
+                                        id: "u101",
                                         fullname: "Tal Tarablus",
                                         imgUrl: "http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg"
                                     }
@@ -159,11 +159,11 @@ async function add(board) {
                             ],
                             checklists: [
                                 {
-                                    _id: "YEhmF",
+                                    id: "YEhmF",
                                     title: "Checklist",
                                     todos: [
                                         {
-                                            _id: "212jX",
+                                            id: "212jX",
                                             title: "To Do 1",
                                             isDone: false
                                         }
@@ -180,7 +180,7 @@ async function add(board) {
                             createdAt: 1590999730348,
                             dueDate: 16156215211,
                             byMember: {
-                                _id: "u101",
+                                id: "u101",
                                 username: "Tal",
                                 fullname: "Tal Tarablus",
                                 imgUrl: "http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg"
@@ -196,16 +196,16 @@ async function add(board) {
             ],
             activities: [
                 {
-                    _id: "a101",
+                    id: "a101",
                     txt: "Changed Color",
                     createdAt: 154514,
                     byMember: {
-                        _id: "u101",
+                        id: "u101",
                         fullname: "Abi Abambi",
                         imgUrl: "http://some-img"
                     },
                     task: {
-                        _id: "c101",
+                        id: "c101",
                         title: "Replace Logo"
                     }
                 }
