@@ -83,7 +83,7 @@ async function add(board) {
                             title: "New item",
                             text: "write something",
                             status: "done",
-                            date: "24/05/2022",
+                            date: "",
                             importance: "high",
                             persons: [
                                 {
@@ -98,7 +98,7 @@ async function add(board) {
                             title: "New item",
                             text: "write something",
                             status: "done",
-                            date: "24/05/2022",
+                            date: "",
                             importance: "mid",
                             persons: [
                                 {
@@ -119,7 +119,7 @@ async function add(board) {
                             title: "New item",
                             text: "write something",
                             status: "done",
-                            date: "24/05/2021",
+                            date: "",
                             importance: "low",
                             persons: [
                                 {
@@ -134,7 +134,7 @@ async function add(board) {
                             id: "c104",
                             title: "New item",
                             text: "write something",
-                            date: "24/06/2012",
+                            date: "",
                             importance: "high",
                             persons: [
                                 {
