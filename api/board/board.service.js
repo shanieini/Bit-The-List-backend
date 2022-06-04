@@ -46,7 +46,43 @@ async function add(board) {
                 fullname: 'guest',
                 imgUrl: "http://some-img"
             },
-            style: {},
+            labels: {
+                status: [
+                    {
+                        txt: 'done',
+                        color: 'rgb(0, 200, 117)'
+                    },
+                    {
+                        txt: 'working on it',
+                        color: 'rgb(253, 171, 61)'
+                    },
+                    {
+                        txt: 'stuck',
+                        color: 'rgb(226, 68, 92)'
+                    },
+                    {
+                        txt: 'none',
+                        color: 'rgb(173, 150, 122)'
+                    },
+                ],
+                importance: [
+                    {
+                        txt: 'high',
+                        color: 'rgb(0, 200, 117)'
+                    }, {
+                        txt: 'mid',
+                        color: 'rgb(253, 171, 61)'
+                    },
+                    {
+                        txt: 'low',
+                        color: 'rgb(226, 68, 92)'
+                    },
+                    {
+                        txt: 'none',
+                        color: 'rgb(173, 150, 122)'
+                    }
+                ]
+            },
             columns: [
                 "text",
                 "status",
@@ -74,6 +110,7 @@ async function add(board) {
             groups: [
                 {
                     id: "g101",
+                    progress: [],
                     title: "Group 1",
                     archivedAt: new Date,
                     style: 'rgb(87, 155, 252)',
@@ -114,6 +151,7 @@ async function add(board) {
                     id: "g102",
                     title: "Group 2",
                     style: 'rgb(87, 155, 252)',
+                    progress: [],
                     tasks: [
                         {
                             id: "c103",
@@ -192,29 +230,9 @@ async function add(board) {
                         }
                     ],
                     style: {}
-
                 }
             ],
             activities: [
-                {
-                    id: "a101",
-                    txt: "Changed Color",
-                    createdAt: 154514,
-                    byMember: {
-                        id: "u101",
-                        fullname: "Abi Abambi",
-                        imgUrl: "http://some-img"
-                    },
-                    task: {
-                        id: "c101",
-                        title: "Replace Logo"
-                    }
-                }
-            ],
-            cmpsOrder: [
-                "status-picker",
-                "member-picker",
-                "date-picker"
             ]
         }
         const collection = await dbService.getCollection('board')
