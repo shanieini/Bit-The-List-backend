@@ -65,7 +65,7 @@ async function add(board) {
                         color: 'rgb(173, 150, 122)'
                     },
                 ],
-                importance: [
+                priority: [
                     {
                         txt: 'high',
                         color: 'rgb(0, 200, 117)'
@@ -84,10 +84,10 @@ async function add(board) {
                 ]
             },
             columns: [
-                "text",
                 "status",
-                "importance",
                 "date",
+                "priority",
+                "text",
                 "persons"
             ],
             persons: [
@@ -121,7 +121,7 @@ async function add(board) {
                             text: "write something",
                             status: "done",
                             date: "",
-                            importance: "high",
+                            priority: "high",
                             persons: [
                                 {
                                     id: "u101",
@@ -136,7 +136,7 @@ async function add(board) {
                             text: "write something",
                             status: "done",
                             date: "",
-                            importance: "mid",
+                            priority: "mid",
                             persons: [
                                 {
                                     id: "u101",
@@ -159,7 +159,7 @@ async function add(board) {
                             text: "write something",
                             status: "done",
                             date: "",
-                            importance: "low",
+                            priority: "low",
                             persons: [
                                 {
                                     id: "u102",
@@ -174,7 +174,7 @@ async function add(board) {
                             title: "New item",
                             text: "write something",
                             date: "",
-                            importance: "high",
+                            priority: "high",
                             persons: [
                                 {
                                     id: "u102",
@@ -182,7 +182,7 @@ async function add(board) {
                                     imgUrl: "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
                                 }
                             ],
-                            status: "in-progress",
+                            status: "working on it",
                             description: "description",
                             comments: [
                                 {
