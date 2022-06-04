@@ -76,7 +76,7 @@ async function add(board) {
                     id: "g101",
                     title: "Group 1",
                     archivedAt: new Date,
-                    style: {},
+                    style: 'rgb(87, 155, 252)',
                     tasks: [
                         {
                             id: "c101",
@@ -113,6 +113,7 @@ async function add(board) {
                 {
                     id: "g102",
                     title: "Group 2",
+                    style: 'rgb(87, 155, 252)',
                     tasks: [
                         {
                             id: "c103",
