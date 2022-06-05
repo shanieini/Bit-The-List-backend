@@ -17,6 +17,7 @@ async function getBoards(req, res) {
 async function deleteBoard(req, res) {
     try {
         const boardId = req.params.id;
+        console.log('boardId: ', boardId);
         const removedId = await BoardService.remove(boardId)
         res.send(removedId)
     } catch (err) {
@@ -32,6 +33,7 @@ async function addBoard(req, res) {
 
     try {
         var board = req.body
+        console.log('board: ', board);
         // board.byUserId = loggedinUser._id // dont forget to turn on
         board = await BoardService.add(board)
 
