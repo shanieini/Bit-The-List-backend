@@ -95,6 +95,23 @@ function timeAgo(ms = new Date()) {
       return time //? time : 'Just now'
     }
   }
+
+}
+function getRandomColor() {
+  var letters = '0123456789ABCDEF'
+  var color = '#'
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)]
+  }
+  return color
+}
+
+function getColors() {
+  var colors = []
+  for (var i = 0; i < 20; i++) {
+    colors.push(getRandomColor())
+  }
+  return colors
 }
 
 module.exports = {
@@ -104,4 +121,6 @@ module.exports = {
   generateRandomName,
   timeAgo,
   generateRandomImg,
+  getRandomColor,
+  getColors
 }

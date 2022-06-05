@@ -2,6 +2,8 @@ const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
 const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
+const utilService = require('../../services/util.service.js')
+
 
 async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
@@ -46,43 +48,7 @@ async function add(board) {
                 fullname: 'guest',
                 imgUrl: "http://some-img"
             },
-            labels: {
-                status: [
-                    {
-                        txt: 'done',
-                        color: 'rgb(0, 200, 117)'
-                    },
-                    {
-                        txt: 'working on it',
-                        color: 'rgb(253, 171, 61)'
-                    },
-                    {
-                        txt: 'stuck',
-                        color: 'rgb(226, 68, 92)'
-                    },
-                    {
-                        txt: 'none',
-                        color: 'rgb(173, 150, 122)'
-                    },
-                ],
-                priority: [
-                    {
-                        txt: 'high',
-                        color: 'rgb(0, 200, 117)'
-                    }, {
-                        txt: 'mid',
-                        color: 'rgb(253, 171, 61)'
-                    },
-                    {
-                        txt: 'low',
-                        color: 'rgb(226, 68, 92)'
-                    },
-                    {
-                        txt: 'none',
-                        color: 'rgb(173, 150, 122)'
-                    }
-                ]
-            },
+            labels: utilService.getColors(),
             columns: [
                 "status",
                 "date",
@@ -113,7 +79,7 @@ async function add(board) {
                     progress: [],
                     title: "Group 1",
                     archivedAt: new Date,
-                    style: 'rgb(87, 155, 252)',
+                    style: utilService.getRandomColor(),
                     tasks: [
                         {
                             id: "c101",
@@ -150,7 +116,7 @@ async function add(board) {
                 {
                     id: "g102",
                     title: "Group 2",
-                    style: 'rgb(87, 155, 252)',
+                    style: utilService.getRandomColor(),
                     progress: [],
                     tasks: [
                         {
@@ -229,7 +195,6 @@ async function add(board) {
                             }
                         }
                     ],
-                    style: {}
                 }
             ],
             activities: [
