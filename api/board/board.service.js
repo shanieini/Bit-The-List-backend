@@ -96,7 +96,8 @@ async function add(board) {
                                     _id: "userId",
                                     createdAt: createdAt
                                 },
-                                text: `Created at ${createdAt}  `
+                                text: `Created at ${createdAt}  `,
+                                isRead: false,
                             }],
                             persons: [
                                 {
@@ -120,7 +121,8 @@ async function add(board) {
                                     _id: "userId",
                                     createdAt: createdAt
                                 },
-                                text: `Created at ${createdAt}  `
+                                text: `Created at ${createdAt}  `,
+                                isRead: false,
                             }],
                             persons: [
                                 {
@@ -152,7 +154,8 @@ async function add(board) {
                                     _id: "userId",
                                     createdAt: createdAt
                                 },
-                                text: `Created at ${createdAt}  `
+                                text: `Created at ${createdAt}  `,
+                                isRead: false,
                             }],
                             persons: [
                                 {
@@ -169,14 +172,15 @@ async function add(board) {
                             text: "write something",
                             date: "",
                             priority: "high",
-                            updates:[{
+                            updates: [{
                                 byMember: {
                                     fullname: "Carmel Yona",
                                     imgUrl: "",
                                     _id: "userId",
                                     createdAt: createdAt
                                 },
-                                text: `Created at ${createdAt}  `
+                                text: `Created at ${createdAt}  `,
+                                isRead: false,
                             }],
                             persons: [
                                 {
