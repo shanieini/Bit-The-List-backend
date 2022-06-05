@@ -38,6 +38,7 @@ async function remove(boardId) {
 
 
 async function add(board) {
+    const createdAt = new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' })
     try {
         const boardToAdd = {
             title: board.title,
@@ -88,6 +89,15 @@ async function add(board) {
                             status: "done",
                             date: "",
                             priority: "high",
+                            updates: [{
+                                byMember: {
+                                    fullname: "Carmel Yona",
+                                    imgUrl: "",
+                                    _id: "userId",
+                                    createdAt: createdAt
+                                },
+                                text: `Created at ${createdAt}  `
+                            }],
                             persons: [
                                 {
                                     id: "u101",
@@ -103,6 +113,15 @@ async function add(board) {
                             status: "done",
                             date: "",
                             priority: "mid",
+                            updates: [{
+                                byMember: {
+                                    fullname: "Carmel Yona",
+                                    imgUrl: "",
+                                    _id: "userId",
+                                    createdAt: createdAt
+                                },
+                                text: `Created at ${createdAt}  `
+                            }],
                             persons: [
                                 {
                                     id: "u101",
@@ -126,6 +145,15 @@ async function add(board) {
                             status: "done",
                             date: "",
                             priority: "low",
+                            updates: [{
+                                byMember: {
+                                    fullname: "Carmel Yona",
+                                    imgUrl: "",
+                                    _id: "userId",
+                                    createdAt: createdAt
+                                },
+                                text: `Created at ${createdAt}  `
+                            }],
                             persons: [
                                 {
                                     id: "u102",
@@ -141,6 +169,15 @@ async function add(board) {
                             text: "write something",
                             date: "",
                             priority: "high",
+                            updates:[{
+                                byMember: {
+                                    fullname: "Carmel Yona",
+                                    imgUrl: "",
+                                    _id: "userId",
+                                    createdAt: createdAt
+                                },
+                                text: `Created at ${createdAt}  `
+                            }],
                             persons: [
                                 {
                                     id: "u102",
