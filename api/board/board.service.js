@@ -61,17 +61,17 @@ async function add(board) {
                 {
                     id: "u101",
                     fullname: "Carmel Yona",
-                    imgUrl: "https://www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
+                    imgUrl: "https://ca.slack-edge.com/T02SFLQBMS9-U02TP754YHH-119f03fb57ec-512"
                 },
                 {
                     id: "u102",
                     fullname: "Shani Eini",
-                    imgUrl: "https://www.google.com"
+                    imgUrl: "https://ca.slack-edge.com/T02SFLQBMS9-U03273X77HS-f54656e9e28d-48"
                 },
                 {
                     id: "u103",
                     fullname: "Hallel Hofman",
-                    imgUrl: "https://www.google.com"
+                    imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Hoeffler_H.svg/1024px-Hoeffler_H.svg.png"
                 }
             ],
             groups: [
@@ -89,6 +89,10 @@ async function add(board) {
                             status: "done",
                             date: "",
                             priority: "high",
+                            style: {
+                                status: "rgb(0, 200, 117)",
+                                priority: "rgb(0, 200, 117)"
+                            },
                             updates: [{
                                 byMember: {
                                     fullname: "Carmel Yona",
@@ -100,11 +104,7 @@ async function add(board) {
                                 isRead: false,
                             }],
                             persons: [
-                                {
-                                    id: "u101",
-                                    fullname: "Carmel Yona",
-                                    imgUrl: "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
-                                }
+
                             ]
                         },
                         {
@@ -114,6 +114,10 @@ async function add(board) {
                             status: "done",
                             date: "",
                             priority: "mid",
+                            style: {
+                                status: "rgb(0, 200, 117)",
+                                priority: "rgb(253, 171, 61)"
+                            },
                             updates: [{
                                 byMember: {
                                     fullname: "Carmel Yona",
@@ -125,11 +129,7 @@ async function add(board) {
                                 isRead: false,
                             }],
                             persons: [
-                                {
-                                    id: "u101",
-                                    fullname: "Carmel Yona",
-                                    imgUrl: "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
-                                }
+
                             ]
                         }
                     ]
@@ -147,6 +147,10 @@ async function add(board) {
                             status: "done",
                             date: "",
                             priority: "low",
+                            style: {
+                                status: "rgb(0, 200, 117)",
+                                priority: "rgb(226, 68, 92)"
+                            },
                             updates: [{
                                 byMember: {
                                     fullname: "Carmel Yona",
@@ -158,11 +162,7 @@ async function add(board) {
                                 isRead: false,
                             }],
                             persons: [
-                                {
-                                    id: "u102",
-                                    fullname: "Shani eini",
-                                    imgUrl: "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
-                                }
+
                             ],
                             archivedAt: new Date
                         },
@@ -171,7 +171,12 @@ async function add(board) {
                             title: "New item",
                             text: "write something",
                             date: "",
+                            status: 'done',
                             priority: "high",
+                            style: {
+                                status: "rgb(0, 200, 117)",
+                                priority: "rgb(0, 200, 117)"
+                            },
                             updates: [{
                                 byMember: {
                                     fullname: "Carmel Yona",
@@ -183,13 +188,8 @@ async function add(board) {
                                 isRead: false,
                             }],
                             persons: [
-                                {
-                                    id: "u102",
-                                    fullname: "Shani eini",
-                                    imgUrl: "https: www.facebook.com/photo/?fbid=5291191697564727&set=a.152304304786851"
-                                }
+
                             ],
-                            status: "working on it",
                             description: "description",
                             comments: [
                                 {
@@ -231,9 +231,7 @@ async function add(board) {
                                 fullname: "Tal Tarablus",
                                 imgUrl: "http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg"
                             },
-                            style: {
-                                bgColor: "#26de81"
-                            }
+
                         }
                     ],
                 }
