@@ -11,10 +11,6 @@ async function query(filterBy = {}) {
         const collection = await dbService.getCollection('board')
         var boards = await collection.find(criteria).toArray()
         boards = boards.map(board => {
-            // delete user.password
-            // user.createdAt = ObjectId(user._id).getTimestamp()
-            // Returning fake fresh data
-            // user.createdAt = Date.now() - (1000 * 60 * 60 * 24 * 3) // 3 days ago
             return board
         })
         return boards

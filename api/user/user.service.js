@@ -97,14 +97,14 @@ async function add(user) {
             password: user.password,
             imgUrl: "http://some-img.jpg",
             boards: [
-                {
-                    _id: "b101",
-                    title: "oof gozal"
-                },
-                {
-                    _id: "b102",
-                    title: "chtoch et hashmaim"
-                }
+                // {
+                //     _id: "b101",
+                //     title: "oof gozal"
+                // },
+                // {
+                //     _id: "b102",
+                //     title: "chtoch et hashmaim"
+                // }
             ],
             mentions: [
                 {
