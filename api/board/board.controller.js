@@ -29,38 +29,14 @@ async function deleteBoard(req, res) {
 
 async function addBoard(req, res) {
 
-    // var loggedinUser = authService.validateToken(req.cookies.loginToken) // dont forget to turn on
 
     try {
         var board = req.body
         console.log('board: ', board);
-        // board.byUserId = loggedinUser._id // dont forget to turn on
         board = await BoardService.add(board)
-
-        // prepare the updated board for sending out
-        // board.aboutUser = await userService.getById(board.aboutUserId)// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-
-        // Give the user credit for adding a board
-        // var user = await userService.getById(board.byUserId)
-        // user.score += 10
-        // loggedinUser.score += 10  dont forget to turn on
-
-        // loggedinUser = await userService.update(loggedinUser) // dont forget to turn on
-        // board.byUser = loggedinUser
-
-        // User info is saved also in the login-token, update it
-        // const loginToken = authService.getLoginToken(loggedinUser) // dont forget to turn on
-        // res.cookie('loginToken', loginToken)
-
-
         socketService.broadcast({ type: 'board-added', data: board, userId: board.byUserId })
         socketService.emitToUser({ type: 'board-about-you', data: board, userId: board.aboutUserId })
-
-        // const fullUser = await userService.getById(loggedinUser._id)
-        // socketService.emitTo({ type: 'user-updated', data: fullUser, label: fullUser._id }) //dont forget to turn on
-
         res.send(board)
-
     } catch (err) {
         console.log(err)
         logger.error('Failed to add board', err)

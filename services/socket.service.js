@@ -14,25 +14,8 @@ function setupSocketAPI(http) {
             logger.info(`Socket disconnected [id: ${socket.id}]`)
         })
         socket.on('update board', (board) => {
-            console.log('boardeeeeeeeeee: ', board);
             logger.info(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`)
-            // emits to all sockets:
-            // gIo.emit('chat addMsg', msg)
-            // emits only to sockets in the same room
             gIo.emit('update board', board)
-        })
-        socket.on('user-watch', userId => {
-            logger.info(`user-watch from socket [id: ${socket.id}], on user ${userId}`)
-            socket.join('watching:' + userId)
-
-        })
-        socket.on('set-user-socket', userId => {
-            logger.info(`Setting socket.userId = ${userId} for socket [id: ${socket.id}]`)
-            socket.userId = userId
-        })
-        socket.on('unset-user-socket', () => {
-            logger.info(`Removing socket.userId for socket [id: ${socket.id}]`)
-            delete socket.userId
         })
 
     })
